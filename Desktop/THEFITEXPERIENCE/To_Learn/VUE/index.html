@@ -7,11 +7,17 @@
         <script src="https://unpkg.com/vue"></script>
     </head>
     <body>
-        <div id="vue-app">
+        <div id="vue-app-data-methods">
             <h1>{{ greet('afternoon') }}</h1>
             <p>Name: {{ name }}</p>
             <p>Job: {{ job }}</p>
         </div>
+	   <div id="vue-app-data-binding">
+		   <h1> Data Binding </h1>
+		   <a v-bind:href=website> Moodle homepage </a>
+		   <input type="text" v-bind:value="job" />
+		   <p v-html="websiteTag"></p>
+	   </div>
     </body>
 
     <script src="app.js"></script>

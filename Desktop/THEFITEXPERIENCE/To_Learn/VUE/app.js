@@ -1,8 +1,9 @@
 new Vue({
-    el: '#vue-app',
+    el: '#vue-app-data-methods',
     data: {
         name: 'Keaton',
-        job: 'Developer'
+        job: 'Developer',
+
     },
     methods: {
         greet: function(time){
@@ -10,3 +11,11 @@ new Vue({
         }
     }
 });
+new Vue({
+     el: '#vue-app-data-binding',
+     data: {
+          website: 'https://moodle.cs.colorado.edu/',
+          websiteTag: '<a href="https://moodle.cs.colorado.edu/">The Moodle homepage</a>',
+          job: 'Developer'
+     }
+})
