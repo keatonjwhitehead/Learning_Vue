@@ -41,8 +41,47 @@ new Vue({
           updateXY:function(event){
                this.x = event.offsetX;
                this.y = event.offsetY;
+          },
+          click:function(){
+               alert('You do not have access to this site yet :(');
+          }
+     }
+});
+new Vue({
+     el: '#vue-app-event-handeling',
+     data: {
+          age: 20,
+          x: 0,
+          y:0
+     },
+     methods: {
+          add: function(inc){
+             this.age += inc;
+          },
+          subtract: function(dec){
+             this.age -= dec;
+          },
+          ageCheck:function(message, event){
+               if(age < 18){
+                    event.prevent()
+                    alert(message);
+               }
           }
 
 
      }
 });
+new Vue({
+     el: "#vue-app-keyboard-events",
+     data: {
+
+     },
+     methods: {
+          logName:function(){
+               console.log('You entered your name');
+          },
+          logAge:function(){
+               console.log('You entered your age');
+          }
+     }
+})
