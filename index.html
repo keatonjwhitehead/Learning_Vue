@@ -96,6 +96,24 @@
           <p v-show="success">Success! Congrats!</p>
           !-->
      </div>
+     <div id = "vue-app-looping-withv-for">
+          <h1>Looping through lists</h1>
+          <ul>
+               <li v-for="character in characters">{{ character }}</li>
+          </ul>
+          <ul>
+               <li v-for="(toad, index) in toads">{{ index }}.{{ toad.name  }} - {{ toad.attack }}</li>
+          </ul>
+          <template v-for="(toad, index) in toads">
+               <h3> {{ index }}.{{ toad.name  }}</h3>
+               <p>{{ toad.attack }}</p>
+          </template>
+          <template v-for="toad in toads">
+               <div v-for="(val,key) in toad">
+                    <p>{{ key }} - {{ val }}</p>
+               </div>
+          </template>
+     </div>
 </body>
 <script src="app.js"></script>
 </html>

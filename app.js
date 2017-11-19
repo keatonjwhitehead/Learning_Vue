@@ -85,7 +85,7 @@ new Vue({
                console.log('You entered your age');
           }
      }
-})
+});
 new Vue({
      el: "#vue-app-two-way-data-binding",
      data: {
@@ -99,7 +99,7 @@ new Vue({
           logAge:function(){
           }
      }
-})
+});
 new Vue({
      el: "#vue-app-Computed-Properties",
      data: {
@@ -120,7 +120,7 @@ new Vue({
                return this.b + this.age
           }
      }
-})
+});
 new Vue({
      el:"#vue-app-dynamic-css-classes",
      data:{
@@ -138,7 +138,7 @@ new Vue({
                }
           }
      }
-})
+});
 new Vue({
      el:"#vue-app-conditionals",
      data:{
@@ -151,4 +151,21 @@ new Vue({
      computed:{
 
      }
-})
+});
+new Vue({
+     el:"#vue-app-looping-withv-for",
+     data:{
+          characters:['Mario','Luigi','Yoshi','Bowser'],
+          toads:[
+               {name:'Michael', attack:25},
+               {name:'Keat', attack:25},
+               {name:'Matt', attack:25}
+          ]
+     },
+     methods:{
+
+     },
+     computed:{
+
+     }
+});
