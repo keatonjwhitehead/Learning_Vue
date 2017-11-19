@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>VueJS Tutorials</title>
-        <link href="style.css" rel="stylesheet" />
-        <script src="https://unpkg.com/vue"></script>
-    </head>
-    <body>
-        <div id = "vue-app-data-methods">
-            <h1>{{ greet('afternoon') }}</h1>
-            <p>Name: {{ name }}</p>
-            <p>Job: {{ job }}</p>
-        </div>
-	   <div id = "vue-app-data-binding">
-		   <h1> Data Binding </h1>
-		   <a v-bind:href=website> Moodle homepage </a>
-		   <input type="text" v-bind:value="job" />
-		   <p v-html="websiteTag"></p>
-	   </div>
-        <div id = "vue-app-events">
-             <h1>Events</h1>
-             <button @click.once="add(1)">Add a Year</button>
-             <button v-on:click="subtract(1)">Subtract a Year</button>
-             <button @dblclick="add(10)">Add 10 Years</button>
-             <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
-             <button v-on:click="balance">Test age limit</button>
-             <p>My age is {{age}}</p>
-             <div id = "canvas" v-on:mousemove="updateXY">
-                  {{ x }}, {{y}}
-             </div>
-             <a @click.prevent="click" href ="https://moodle.cs.colorado.edu/">A disapearing weblink</a>
-        </div>
-        <div id = "vue-app-event-handeling">
-            <h1>Events</h1>
-            <button @click.once="add(1)">Add a Year</button>
-            <button v-on:click="subtract(1)">Subtract a Year</button>
-            <button @dblclick="add(10)">Add 10 Years</button>
-            <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
-            <p>My age is {{age}}</p>
-            <a @click="ageCheck('You are too young for this site', age)" href ="https://moodle.cs.colorado.edu/">A disapearing weblink</a>
-        </div>
-        <div id = "vue-app-keyboard-events">
-             <h1>Keyboard Events</h1>
-             <label>Name</label>
-             <input type = "text" v-on:keyup.enter="logName"/>
-             <label>Age (Press alt + enter to enter age):</label>
-             <input type="text"v-on:keyup.alt.enter="logAge">
-        </div>
-        <div id = "vue-app-two-way-data-binding">
-             <h1>Keyboard Events</h1>
-             <label>Name</label>
-             <input type = "text" v-model="name"/>
-             <span>{{ name }}</span>
-             <label>Age:</label>
-             <input type="text"v-model="age">
-             <span>{{ age }} </span>
-
-        </div>
-    </body>
-
-    <script src="app.js"></script>
+<head>
+     <meta charset="utf-8">
+     <title>VueJS Tutorials</title>
+     <link href="style.css" rel="stylesheet" />
+     <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+     <div id = "vue-app-data-methods">
+          <h1>{{ greet('afternoon') }}</h1>
+          <p>Name: {{ name }}</p>
+          <p>Job: {{ job }}</p>
+     </div>
+     <div id = "vue-app-data-binding">
+          <h1> Data Binding </h1>
+          <a v-bind:href=website> Moodle homepage </a>
+          <input type="text" v-bind:value="job" />
+          <p v-html="websiteTag"></p>
+     </div>
+     <div id = "vue-app-events">
+          <h1>Events</h1>
+          <button @click.once="add(1)">Add a Year</button>
+          <button v-on:click="subtract(1)">Subtract a Year</button>
+          <button @dblclick="add(10)">Add 10 Years</button>
+          <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
+          <button v-on:click="balance">Test age limit</button>
+          <p>My age is {{age}}</p>
+          <div id = "canvas" v-on:mousemove="updateXY">
+               {{ x }}, {{y}}
+          </div>
+          <a @click.prevent="click" href ="https://moodle.cs.colorado.edu/">A disapearing weblink</a>
+     </div>
+     <div id = "vue-app-event-handeling">
+          <h1>Events</h1>
+          <button @click.once="add(1)">Add a Year</button>
+          <button v-on:click="subtract(1)">Subtract a Year</button>
+          <button @dblclick="add(10)">Add 10 Years</button>
+          <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
+          <p>My age is {{age}}</p>
+          <a @click="ageCheck('You are too young for this site', age)" href ="https://moodle.cs.colorado.edu/">A disapearing weblink</a>
+     </div>
+     <div id = "vue-app-keyboard-events">
+          <h1>Keyboard Events</h1>
+          <label>Name</label>
+          <input type = "text" v-on:keyup.enter="logName"/>
+          <label>Age (Press alt + enter to enter age):</label>
+          <input type="text"v-on:keyup.alt.enter="logAge">
+     </div>
+     <div id = "vue-app-two-way-data-binding">
+          <h1>Keyboard Events</h1>
+          <label>Name</label>
+          <input type = "text" v-model="name"/>
+          <span>{{ name }}</span>
+          <label>Age:</label>
+          <input type="text"v-model="age">
+          <span>{{ age }} </span>
+     </div>
+     <div id = "vue-app-Computed-Properties">
+          <h1>Computed Properties</h1>
+          <button v-on:click = "a++">Add to A</button>
+          <button v-on:click = "b++">Add to B</button>
+          <p>A = {{ a }} </p>
+          <p>B = {{ b }}</p>
+          <p>Age + A = {{ addToA }}</p>
+          <p>Age + B = {{ addToB }}</p>
+     </div>
+</body>
+<script src="app.js"></script>
 </html>
