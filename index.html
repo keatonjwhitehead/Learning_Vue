@@ -85,6 +85,17 @@
                <span>Cab Availability</span> *Click me to change colors!*
           </div>
      </div>
+     <div id = "vue-app-conditionals">
+          <h1>Conditionals</h1>
+          <button v-on:click="error = !error">Toggle Error</button>
+          <button v-on:click="success = !success">Toggle Success</button>
+          <p v-if="error">There has been an error</p>
+          <p v-else-if="success">Success! Congrats!</p>
+          <!--
+          <p v-show="error">There has been an error</p>
+          <p v-show="success">Success! Congrats!</p>
+          !-->
+     </div>
 </body>
 <script src="app.js"></script>
 </html>
