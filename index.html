@@ -46,6 +46,15 @@
              <input type = "text" v-on:keyup.enter="logName"/>
              <label>Age (Press alt + enter to enter age):</label>
              <input type="text"v-on:keyup.alt.enter="logAge">
+        </div>
+        <div id = "vue-app-two-way-data-binding">
+             <h1>Keyboard Events</h1>
+             <label>Name</label>
+             <input type = "text" v-model="name"/>
+             <span>{{ name }}</span>
+             <label>Age:</label>
+             <input type="text"v-model="age">
+             <span>{{ age }} </span>
 
         </div>
     </body>

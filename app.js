@@ -74,14 +74,29 @@ new Vue({
 new Vue({
      el: "#vue-app-keyboard-events",
      data: {
-
+          name: '',
+          age: ''
      },
      methods: {
           logName:function(){
-               console.log('You entered your name');
+               console.log('You entered your name')
           },
           logAge:function(){
                console.log('You entered your age');
+          }
+     }
+})
+new Vue({
+     el: "#vue-app-two-way-data-binding",
+     data: {
+          name: '',
+          age: ''
+     },
+     methods: {
+          logName:function(){
+
+          },
+          logAge:function(){
           }
      }
 })
