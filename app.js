@@ -121,3 +121,21 @@ new Vue({
           }
      }
 })
+new Vue({
+     el:"#vue-app-dynamic-css-classes",
+     data:{
+          available:false,
+          nearby:false
+     },
+     methods:{
+
+     },
+     computed:{
+          compClasses:function(){
+               return{
+                    available:this.available,
+                    nearby:this.nearby
+               }
+          }
+     }
+})

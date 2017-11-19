@@ -12,12 +12,14 @@
           <p>Name: {{ name }}</p>
           <p>Job: {{ job }}</p>
      </div>
+     <hr>
      <div id = "vue-app-data-binding">
           <h1> Data Binding </h1>
           <a v-bind:href=website> Moodle homepage </a>
           <input type="text" v-bind:value="job" />
           <p v-html="websiteTag"></p>
      </div>
+     <hr>
      <div id = "vue-app-events">
           <h1>Events</h1>
           <button @click.once="add(1)">Add a Year</button>
@@ -31,6 +33,7 @@
           </div>
           <a @click.prevent="click" href ="https://moodle.cs.colorado.edu/">A disapearing weblink</a>
      </div>
+     <hr>
      <div id = "vue-app-event-handeling">
           <h1>Events</h1>
           <button @click.once="add(1)">Add a Year</button>
@@ -40,6 +43,7 @@
           <p>My age is {{age}}</p>
           <a @click="ageCheck('You are too young for this site', age)" href ="https://moodle.cs.colorado.edu/">A disapearing weblink</a>
      </div>
+     <hr>
      <div id = "vue-app-keyboard-events">
           <h1>Keyboard Events</h1>
           <label>Name</label>
@@ -47,6 +51,7 @@
           <label>Age (Press alt + enter to enter age):</label>
           <input type="text"v-on:keyup.alt.enter="logAge">
      </div>
+     <hr>
      <div id = "vue-app-two-way-data-binding">
           <h1>Keyboard Events</h1>
           <label>Name</label>
@@ -56,6 +61,7 @@
           <input type="text"v-model="age">
           <span>{{ age }} </span>
      </div>
+     <hr>
      <div id = "vue-app-Computed-Properties">
           <h1>Computed Properties</h1>
           <button v-on:click = "a++">Add to A</button>
@@ -64,6 +70,20 @@
           <p>B = {{ b }}</p>
           <p>Age + A = {{ addToA }}</p>
           <p>Age + B = {{ addToB }}</p>
+     </div>
+     <hr>
+     <div id ="vue-app-dynamic-css-classes">
+          <h1>Dynamic CSS</h1>
+          <h2>Example 1</h2>
+          <!-- <div v-on:click="available = !available" v-bind:class="{available:available}">
+               <span>Cab Availability</span> *Click me to change colors!*
+          </div> !-->
+          <h2>Example 2</h2>
+          <button v-on:click="available = !available">Toogle available</button>
+          <button v-on:click="nearby = !nearby">Toogle nearby</button>
+          <div v-bind:class="compClasses">
+               <span>Cab Availability</span> *Click me to change colors!*
+          </div>
      </div>
 </body>
 <script src="app.js"></script>
